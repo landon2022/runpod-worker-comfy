@@ -39,8 +39,9 @@ def validate_input(job_input):
         # Define the file path
     file_path = "/comfyui/custom_nodes/ComfyUI_LayerStyle_Advance/api_key.ini"
     # Append the line to the .ini file
-    with open(file_path, "a") as f:
-        f.write(f"google_api_key={gemini_key}")
+    if os.path.exists(file_path) != True:
+        with open(file_path, "a") as f:
+            f.write(f"google_api_key={gemini_key}")
 
     # Validate if job_input is provided
     if job_input is None:
