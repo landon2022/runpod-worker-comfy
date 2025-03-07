@@ -84,11 +84,11 @@ RUN git clone https://huggingface.co/MonsterMMORPG/tools models/insightface/mode
 RUN git clone https://huggingface.co/YxZhang/evf-sam models/EVF-SAM/evf-sam
 
 # Download checkpoints/vae/LoRA to include in image based on model type
-RUN wget --header="Authorization: Bearer ${HUGGINGFACE_ACCESS_TOKEN}" -O models/checkpoints/flux1-dev-fp8.safetensors https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors && \
-    wget --header="Authorization: Bearer ${HUGGINGFACE_ACCESS_TOKEN}" -O models/pulid/pulid_flux_v0.9.1.safetensors https://huggingface.co/guozinan/PuLID/resolve/main/pulid_flux_v0.9.1.safetensors && \
-    wget --header="Authorization: Bearer ${HUGGINGFACE_ACCESS_TOKEN}" -O models/clip/EVA02_CLIP_L_336_psz14_s6B.pt https://huggingface.co/QuanSun/EVA-CLIP/resolve/main/EVA02_CLIP_L_336_psz14_s6B.pt && \
-    wget --header="Authorization: Bearer ${HUGGINGFACE_ACCESS_TOKEN}" -O models/upscale_models/RealESRGAN_x2.pth https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x2.pth && \
-    wget --header="Authorization: Bearer ${HUGGINGFACE_ACCESS_TOKEN}" -O models/loras/PIXAR_4.0.safetensors https://huggingface.co/alexanderburuma/pixar4/resolve/main/PIXAR_4.0.safetensors && \
+RUN wget -O models/checkpoints/flux1-dev-fp8.safetensors https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors && \
+    wget -O models/pulid/pulid_flux_v0.9.1.safetensors https://huggingface.co/guozinan/PuLID/resolve/main/pulid_flux_v0.9.1.safetensors && \
+    wget -O models/clip/EVA02_CLIP_L_336_psz14_s6B.pt https://huggingface.co/QuanSun/EVA-CLIP/resolve/main/EVA02_CLIP_L_336_psz14_s6B.pt && \
+    wget -O models/upscale_models/RealESRGAN_x2.pth https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x2.pth && \
+    wget -O models/loras/PIXAR_4.0.safetensors https://huggingface.co/alexanderburuma/pixar4/resolve/main/PIXAR_4.0.safetensors && \
     wget -O models/facexlib/parsing_bisenet.pth https://github.com/xinntao/facexlib/releases/download/v0.2.0/parsing_bisenet.pth && \
     wget -O models/facexlib/parsing_parsenet.pth https://github.com/xinntao/facexlib/releases/download/v0.2.2/parsing_parsenet.pth && \
     wget -O models/facexlib/detection_Resnet50_Final.pt https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_Resnet50_Final.pth;
