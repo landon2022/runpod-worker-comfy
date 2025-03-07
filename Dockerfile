@@ -33,7 +33,7 @@ RUN apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 RUN pip install comfy-cli
 
 # Install ComfyUI
-RUN /usr/bin/yes | comfy --workspace /comfyui install --cuda-version 11.8 --nvidia --version 0.3.23
+RUN /usr/bin/yes | comfy --workspace /comfyui install --cuda-version 11.8 --nvidia --version 0.3.24
 
 # Change working directory to ComfyUI
 WORKDIR /comfyui
@@ -59,6 +59,9 @@ RUN /restore_snapshot.sh
 
 RUN  echo "google_api_key=${GEMINI_KEY}" >> comfyui/custom_nodes/ComfyUI_LayerStyle_Advance/api_key.ini
 
+RUN pip3 install insightface==0.7.3
+
+RUN pip3 install torchscale
 
 # Start container
 CMD ["/start.sh"]
