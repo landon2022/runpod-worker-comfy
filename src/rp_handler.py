@@ -22,7 +22,8 @@ COMFY_HOST = "127.0.0.1:8188"
 # Enforce a clean state after each job is done
 # see https://docs.runpod.io/docs/handler-additional-controls#refresh-worker
 REFRESH_WORKER = os.environ.get("REFRESH_WORKER", "false").lower() == "true"
-
+# Get the GEMINI_KEY from an environment variable (equivalent to ${GEMINI_KEY} in shell)
+gemini_key = os.environ.get("GEMINI_KEY", "test_key")  # Fallback to "default_key" if not set
 
 def validate_input(job_input):
     """
@@ -35,6 +36,12 @@ def validate_input(job_input):
         tuple: A tuple containing the validated data and an error message, if any.
                The structure is (validated_data, error_message).
     """
+        # Define the file path
+    file_path = "/comfyui/custom_nodes/ComfyUI_LayerStyle_Advance/api_key.ini"
+    # Append the line to the .ini file
+    with open(file_path, "a") as f:
+        f.write(f"google_api_key={gemini_key}")
+
     # Validate if job_input is provided
     if job_input is None:
         return None, "Please provide input"

@@ -57,7 +57,7 @@ ADD *snapshot*.json /
 # Restore the snapshot to install custom nodes
 RUN /restore_snapshot.sh
 
-RUN  echo "google_api_key=${GEMINI_KEY}" >> comfyui/custom_nodes/ComfyUI_LayerStyle_Advance/api_key.ini
+# RUN  echo "google_api_key=${GEMINI_KEY}" >> comfyui/custom_nodes/ComfyUI_LayerStyle_Advance/api_key.ini
 
 RUN pip3 install insightface==0.7.3
 
