@@ -76,8 +76,8 @@ RUN pip3 install insightface==0.7.3
 
 RUN pip3 install torchscale
 
-# Start container
-CMD ["/start.sh"]
+# # Start container
+# CMD ["/start.sh"]
 
 # Stage 2: Download models
 FROM base as downloader
@@ -104,7 +104,7 @@ RUN wget -O models/checkpoints/flux1-dev-fp8.safetensors https://huggingface.co/
     wget -O models/loras/PIXAR_4.0.safetensors https://huggingface.co/alexanderburuma/pixar4/resolve/main/PIXAR_4.0.safetensors && \
     wget -O models/facexlib/parsing_bisenet.pth https://github.com/xinntao/facexlib/releases/download/v0.2.0/parsing_bisenet.pth && \
     wget -O models/facexlib/parsing_parsenet.pth https://github.com/xinntao/facexlib/releases/download/v0.2.2/parsing_parsenet.pth && \
-    wget -O models/facexlib/detection_Resnet50_Final.pt https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_Resnet50_Final.pth;
+    wget -O models/facexlib/detection_Resnet50_Final.pth https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_Resnet50_Final.pth;
 
 # Stage 3: Final image
 FROM base as final
