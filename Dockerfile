@@ -59,7 +59,21 @@ RUN /restore_snapshot.sh
 
 # RUN  echo "google_api_key=${GEMINI_KEY}" >> comfyui/custom_nodes/ComfyUI_LayerStyle_Advance/api_key.ini
 
-WORKDIR  /comfyui/custom_nodes/comfyui-impact-pack
+WORKDIR /comfyui/custom_nodes/comfyui_layerstyle
+
+RUN pip3 install -r requirements.txt
+
+WORKDIR /comfyui/custom_nodes/ComfyUI_LayerStyle_Advance
+
+RUN pip3 install -r requirements.txt
+
+
+WORKDIR /comfyui/custom_nodes/comfyui-impact-pack
+
+RUN pip3 install -r requirements.txt
+
+WORKDIR /comfyui/custom_nodes/comfyui-impact-subpack
+
 RUN pip3 install -r requirements.txt
 
 
@@ -75,6 +89,7 @@ RUN pip3 install facexlib
 RUN pip3 install insightface==0.7.3
 
 RUN pip3 install torchscale
+
 
 # # Start container
 # CMD ["/start.sh"]
