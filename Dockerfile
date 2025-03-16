@@ -41,6 +41,8 @@ WORKDIR /comfyui
 # Install runpod
 RUN pip install runpod requests
 
+RUN pip3 install --upgrade pip   
+
 # Support for the network volume
 ADD src/extra_model_paths.yaml ./
 
