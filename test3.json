@@ -1,6 +1,10 @@
 {
     "comfyui": "a13125840c47c2342fa80aec8fdaee8626dff135",
     "git_custom_nodes": {
+        "https://github.com/liusida/ComfyUI-AutoCropFaces": {
+            "hash": "b2139db9a8ffb4707832106a58f519bbd04e6118",
+            "disabled": false
+        },
         "https://github.com/logtd/ComfyUI-Fluxtapoz": {
             "hash": "17c71bea20e932945e9c1be0586cfd4b7e51cbf6",
             "disabled": false
@@ -24,11 +28,14 @@
     },
     "cnr_custom_nodes": {
         "comfyui-art-venture": "1.0.6",
+        "comfyui-custom-scripts": "1.1.1",
         "comfyui-impact-pack": "8.8.1",
         "comfyui-impact-subpack": "1.2.9",
+        "comfyui_essentials": "1.1.0",
         "comfyui_layerstyle": "1.0.90",
         "comfyui_patches_ll": "1.1.0",
-        "comfyui_pulid_flux_ll": "1.1.4"
+        "comfyui_pulid_flux_ll": "1.1.4",
+        "was-node-suite-comfyui": "1.0.2"
     },
     "file_custom_nodes": [
         {
