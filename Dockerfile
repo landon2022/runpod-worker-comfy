@@ -93,8 +93,8 @@ RUN pip3 install insightface==0.7.3
 RUN pip3 install torchscale
 
 
-# # Start container
-# CMD ["/start.sh"]
+# Start container
+CMD ["/start.sh"]
 
 # Stage 2: Download models
 FROM base as downloader
