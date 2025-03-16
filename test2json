@@ -9,10 +9,6 @@
             "hash": "17c71bea20e932945e9c1be0586cfd4b7e51cbf6",
             "disabled": false
         },
-        "https://github.com/city96/ComfyUI-GGUF": {
-            "hash": "5aa6e98ad74e2fa826f80c8dbded5ec3dd09ba1f",
-            "disabled": false
-        },
         "https://github.com/kijai/ComfyUI-KJNodes": {
             "hash": "d126b62cebee81ea14ec06ea7cd7526999cb0554",
             "disabled": false
@@ -30,7 +26,6 @@
         "comfyui-art-venture": "1.0.6",
         "comfyui-custom-scripts": "1.1.1",
         "comfyui-impact-pack": "8.8.1",
-        "comfyui-impact-subpack": "1.2.9",
         "comfyui_essentials": "1.1.0",
         "comfyui_layerstyle": "1.0.90",
         "comfyui_patches_ll": "1.1.0",
@@ -131,7 +126,6 @@
         "fsspec==2025.2.0": "",
         "ftfy==6.3.1": "",
         "gdown==5.2.0": "",
-        "gguf==0.14.0": "",
         "gitdb==4.0.12": "",
         "GitPython==3.1.44": "",
         "google-ai-generativelanguage==0.6.15": "",
