@@ -65,9 +65,9 @@ WORKDIR /comfyui/custom_nodes/comfyui_layerstyle
 
 RUN pip3 install -r requirements.txt
 
-WORKDIR /comfyui/custom_nodes/ComfyUI_LayerStyle_Advance
+# WORKDIR /comfyui/custom_nodes/ComfyUI_LayerStyle_Advance
 
-RUN pip3 install -r requirements.txt
+# RUN pip3 install -r requirements.txt
 
 
 WORKDIR /comfyui/custom_nodes/comfyui-impact-pack
