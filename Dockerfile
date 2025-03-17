@@ -65,9 +65,9 @@ WORKDIR /comfyui/custom_nodes/comfyui_layerstyle
 
 RUN pip3 install -r requirements.txt
 
-# WORKDIR /comfyui/custom_nodes/ComfyUI_LayerStyle_Advance
+WORKDIR /comfyui/custom_nodes/ComfyUI_LayerStyle_Advance
 
-# RUN pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 
 WORKDIR /comfyui/custom_nodes/comfyui-impact-pack
@@ -107,13 +107,13 @@ WORKDIR /comfyui
 
 RUN git lfs install
 # Create necessary directories
-RUN mkdir -p models/checkpoints models/clip models/loras models/pulid models/insightface/models/antelopev2 models/facexlib models/EVF-SAM/evf-sam models/upscale_models models/clip_seg/clipseg-rd64-refined models/unet models/vae models/ultralytics/bbox
+RUN mkdir -p models/checkpoints models/clip models/loras models/pulid models/insightface/models/antelopev2 models/facexlib models/EVF-SAM/evf-sam models/upscale_models models/clip_seg/clipseg-rd64-refined-fp16 models/unet models/vae models/ultralytics/bbox
 
 RUN git clone https://huggingface.co/MonsterMMORPG/tools models/insightface/models/antelopev2
 
 RUN git clone https://huggingface.co/YxZhang/evf-sam models/EVF-SAM/evf-sam
 
-RUN git clone https://huggingface.co/CIDAS/clipseg-rd64-refined models/clip_seg/clipseg-rd64-refined
+RUN git clone https://huggingface.co/Kijai/clipseg-rd64-refined-fp16 models/clip_seg/clipseg-rd64-refined-fp16
 
 # Download checkpoints/vae/LoRA to include in image based on model type
 # RUN wget -O models/checkpoints/flux1-dev-fp8.safetensors https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors && \
